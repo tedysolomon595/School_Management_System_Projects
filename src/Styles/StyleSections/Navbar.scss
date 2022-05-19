@@ -1,0 +1,83 @@
+.navbar {
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5em;
+    width: 100%;
+    .light-dark {
+        width: 35px;
+        height: 12px;
+        border-radius: 5px;
+        border: 1px solid var(--text-color);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        .light {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            &.active {
+                background-color: var(--important-color);
+            }
+        }
+        .dark {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            &.active {
+                background-color: var(--important-color);
+            }
+        }
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            color: var(--important-color);
+            font-weight: bold;
+            font-size: 1.5em;
+            --text-shadow: 0 2px 6px var(--shadow-color);
+            span {
+                color: var(--text-color);
+            }
+            .active {
+                color: var(--important-color);
+                font-weight: bold;
+                font-size: 1.5em;
+                span {
+                    color: var(--text-color);
+                }
+            }
+        }
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        font-size: 1em;
+        .link {
+            font-weight: bolder;
+        }
+        .link:hover {
+            color: var(--important-color);
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+    &.active {
+        color: var(--important-color);
+    }
+}

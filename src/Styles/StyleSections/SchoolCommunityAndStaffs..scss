@@ -1,0 +1,33 @@
+.staffs {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    .staffs-left {
+        padding: 3em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        h3 {
+            color: var(--important-color);
+            font-size: 1.3em;
+        }
+        p {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+    }
+    .staffs-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 3em;
+        p {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        h3 {
+            color: var(--important-color);
+            font-size: 1.3em;
+        }
+    }
+}

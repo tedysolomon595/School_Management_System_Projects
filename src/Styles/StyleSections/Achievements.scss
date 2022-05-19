@@ -1,0 +1,63 @@
+.Achievements {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    .next,
+    .prev {
+        background: #000;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: .5;
+        cursor: pointer;
+        p {
+            svg {
+                font-size: 1.8em;
+                font-weight: bolder;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .students-img-container {
+            .student-img {
+                height: 438px;
+                width: 960px;
+                scroll-behavior: smooth;
+                animation: transform animationDelay(.3s) slideToLeft forwards;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .circle-button {
+            .circle {
+                width: 6px;
+                height: 6px;
+                display: inline-block;
+                border-radius: 50%;
+                background: #000;
+                opacity: .2;
+                margin-right: .5em;
+                margin-left: .5em;
+                cursor: pointer;
+            }
+            .circle.active {
+                background: #000;
+                opacity: 1;
+            }
+        }
+    }
+}

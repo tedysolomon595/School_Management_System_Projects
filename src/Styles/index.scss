@@ -1,0 +1,33 @@
+:root {
+    --background-color: #fff;
+    --text-color: #000000;
+    --text-light: #54595F;
+    --important-color: rgb(255, 0, 86);
+    --shadow-color: #abb8c3;
+    --link-color: #ffffff;
+    --animation-speed: 2;
+}
+
+@function animationDelay($duration:number) {
+    @return calc(var(--animation-speed)*$duration)
+}
+
+@import './StyleSections/Achievements.scss';
+@import './StyleSections/TopRanked.scss';
+@import './StyleSections/StaffAndSchool.scss';
+@import './StyleSections/SchoolCommunityAndStaffs..scss';
+@import './StyleSections/aboutSchool.scss';
+@import './StyleSections/animation.scss';
+@import './StyleSections/Footer.scss';
+@import './StyleSections/login.scss';
+@import './StyleSections/Navbar.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Gill Sans", sans-serif;
+    background-color: var(--background-color);
+}
