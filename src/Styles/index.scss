@@ -31,3 +31,883 @@ body {
     font-family: "Gill Sans", sans-serif;
     background-color: var(--background-color);
 }
+
+@media screen and (max-width:768px) {
+    .navbar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 2em;
+        .nav-links {
+            display: none;
+        }
+        .theme-sidebarBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5em;
+            .display-bar {
+                display: block;
+            }
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                color: var(--important-color);
+                font-weight: bold;
+                font-size: 1em;
+                --text-shadow: 0 2px 6px var(--shadow-color);
+                span {
+                    color: var(--text-color);
+                }
+                .active {
+                    color: var(--important-color);
+                    font-weight: bold;
+                    font-size: 1em;
+                    span {
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+    }
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2em;
+        .about-school {
+            width: 100%;
+            height: 500px;
+            border: none;
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            h2 {
+                color: var(--text-color);
+                font-weight: bold;
+            }
+            .guidelines {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 1.2em;
+                p {
+                    color: var(--text-color);
+                    font-size: 1em;
+                    line-height: 1.3;
+                    span {
+                        color: var(--important-color);
+                    }
+                    svg {
+                        color: var(--important-color);
+                        font-weight: bold;
+                        font-size: 1.5em;
+                        margin-right: .5em;
+                    }
+                }
+            }
+        }
+        .form-section {
+            border: 1px solid var(--text-light);
+            width: 400px;
+            height: 500px;
+            padding: 3em;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3em;
+            h2 {
+                color: var(--text-color);
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                .password-label {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 350px;
+                    color: var(--text-color);
+                    .visible {
+                        font-size: .9em;
+                        font-weight: 200;
+                        svg {
+                            margin-left: .5em;
+                        }
+                    }
+                }
+                label {
+                    margin-bottom: .5em;
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    color: var(--text-color);
+                }
+                input {
+                    height: 50px;
+                    background-color: white;
+                    width: 350px;
+                    border-radius: 5px;
+                    border: 1px solid var(--text-light);
+                    outline: none;
+                    text-indent: 8px;
+                    margin-bottom: 3em;
+                }
+                .btn {
+                    height: 50px;
+                    width: 350px;
+                    background-color: var(--important-color);
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    font-size: 1em;
+                    font-weight: bold;
+                }
+            }
+            .linke-here {
+                display: flex;
+                flex-direction: row;
+                width: 350px;
+                justify-content: space-between;
+                a {
+                    font-size: .9em;
+                    color: var(--text-color);
+                }
+                a:hover {
+                    color: var(--important-color);
+                }
+            }
+        }
+    }
+    .about-school {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em;
+        .about-school-left {
+            width: 100%;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            .logo {
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid var(--important-color);
+                border-radius: 50%;
+                width: 50%;
+                height: 50%;
+                padding: 25%;
+                .logo-svg {
+                    color: var(--important-color);
+                    font-weight: bolder;
+                    font-size: 1em;
+                    b {
+                        color: var(--text-color);
+                    }
+                    svg {
+                        color: #f5d106;
+                        font-size: 3em;
+                    }
+                }
+            }
+            .enlightment {
+                color: var(--text-color);
+                font-weight: bold;
+                span {
+                    color: var(--important-color);
+                }
+            }
+        }
+        .about-school-right {
+            width: 100%;
+            padding: 2em;
+            display: flex;
+            gap: .3em;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                color: var(--important-color);
+                margin-bottom: 1.5em;
+            }
+            p {
+                letter-spacing: 1px;
+                color: var(--text-light);
+                line-height: 125%;
+                font-weight: 500;
+                font-size: .9em;
+            }
+        }
+    }
+    .staffs {
+        display: block;
+        padding: 2em;
+        .staffs-left {
+            padding: 3em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            h3 {
+                color: var(--important-color);
+                font-size: 1.3em;
+            }
+            p {
+                color: var(--text-light);
+                font-weight: 500;
+                font-size: .9em;
+            }
+        }
+    }
+    .staffs-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 3em;
+        p {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: .9em;
+        }
+        h3 {
+            color: var(--important-color);
+            font-size: 1.3em;
+        }
+    }
+    .StaffAndSchool {
+        padding: 2em;
+        .card-container {
+            display: flex;
+            height: 410px;
+            gap: 1em;
+            .slidinding-card {
+                width: 250px;
+                height: 400px;
+                box-shadow: 0 5px 10px var(--shadow-color);
+                border-radius: 10px;
+                .imge-card {
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        border-top-right-radius: 10px;
+                        border-top-left-radius: 10px;
+                    }
+                }
+                .content {
+                    width: 100%;
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    h4 {
+                        margin-bottom: 1em;
+                        color: var(--important-color);
+                        font-weight: bold;
+                    }
+                    span {
+                        color: var(--text-color);
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+    }
+    .TopRanked {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        margin-top: 1em;
+        h2 {
+            color: var(--important-color);
+        }
+        .top-image {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 2em;
+            .frame {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                box-shadow: 0 3px 6px var(--shadow-color);
+                .img-container {
+                    width: 150px;
+                    height: 150px;
+                    margin-right: .5em;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .text-content {
+                    padding: .5em;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    h4 {
+                        color: var(--text-color);
+                    }
+                    p {
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+    }
+    .Achievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        gap: .3em;
+        .students-img-container {
+            .student-img {
+                height: 300px;
+                width: 700px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .circle-button {
+            .circle {
+                width: 6px;
+                height: 6px;
+                display: inline-block;
+                border-radius: 50%;
+                background: #000;
+                opacity: .2;
+                margin-right: .5em;
+                margin-left: .5em;
+                cursor: pointer;
+            }
+            .circle.active {
+                background: #000;
+                opacity: 1;
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        width: 100%;
+        margin-top: 4em;
+        .footer-collector {
+            margin-top: 2em;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .more-about {
+                display: flex;
+                flex-direction: column;
+                color: #333333;
+                gap: 1em;
+                .links-about {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    a {
+                        color: #333333;
+                    }
+                    a:hover {
+                        color: var(--important-color);
+                    }
+                }
+            }
+            .contacts {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                color: #333333;
+                p {
+                    svg {
+                        margin-right: .5em;
+                    }
+                }
+                a {
+                    svg {
+                        color: blue;
+                        margin-right: .5em;
+                    }
+                    color: #333333;
+                }
+                a:hover {
+                    color: var(--important-color);
+                }
+            }
+            .location {
+                display: flex;
+                flex-direction: column;
+                color: #333333;
+                gap: 1em;
+                a {
+                    color: #333333;
+                    svg {
+                        color: #000;
+                    }
+                }
+                a:hover {
+                    color: var(--important-color);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2em;
+        .about-school {
+            width: 100%;
+            height: 500px;
+            border: none;
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            h2 {
+                color: var(--text-color);
+                font-weight: bold;
+            }
+            .guidelines {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 1.2em;
+                p {
+                    color: var(--text-color);
+                    font-size: 1em;
+                    line-height: 1.3;
+                    span {
+                        color: var(--important-color);
+                    }
+                    svg {
+                        color: var(--important-color);
+                        font-weight: bold;
+                        font-size: 1.5em;
+                        margin-right: .5em;
+                    }
+                }
+            }
+        }
+        .form-section {
+            border: 1px solid var(--text-light);
+            width: 400px;
+            height: 500px;
+            padding: 3em;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3em;
+            h2 {
+                color: var(--text-color);
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                .password-label {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 350px;
+                    color: var(--text-color);
+                    .visible {
+                        font-size: .9em;
+                        font-weight: 200;
+                        svg {
+                            margin-left: .5em;
+                        }
+                    }
+                }
+                label {
+                    margin-bottom: .5em;
+                    font-size: 1.2em;
+                    font-weight: bold;
+                    color: var(--text-color);
+                }
+                input {
+                    height: 50px;
+                    background-color: white;
+                    width: 350px;
+                    border-radius: 5px;
+                    border: 1px solid var(--text-light);
+                    outline: none;
+                    text-indent: 8px;
+                    margin-bottom: 3em;
+                }
+                .btn {
+                    height: 50px;
+                    width: 350px;
+                    background-color: var(--important-color);
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    font-size: 1em;
+                    font-weight: bold;
+                }
+            }
+            .linke-here {
+                display: flex;
+                flex-direction: row;
+                width: 350px;
+                justify-content: space-between;
+                a {
+                    font-size: .9em;
+                    color: var(--text-color);
+                }
+                a:hover {
+                    color: var(--important-color);
+                }
+            }
+        }
+    }
+    .navbar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-inline: 1em;
+        .nav-links {
+            display: none;
+        }
+        .theme-sidebarBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3em;
+            .display-bar {
+                display: block;
+            }
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                color: var(--important-color);
+                font-weight: bold;
+                font-size: 1em;
+                --text-shadow: 0 2px 6px var(--shadow-color);
+                span {
+                    color: var(--text-color);
+                }
+                .active {
+                    color: var(--important-color);
+                    font-weight: bold;
+                    font-size: 1em;
+                    span {
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+    }
+    .about-school {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em;
+        .about-school-left {
+            width: 100%;
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            .logo {
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid var(--important-color);
+                border-radius: 50%;
+                width: 50%;
+                height: 50%;
+                padding: 25%;
+                .logo-svg {
+                    color: var(--important-color);
+                    font-weight: bolder;
+                    font-size: 1em;
+                    b {
+                        color: var(--text-color);
+                    }
+                    svg {
+                        color: #f5d106;
+                        font-size: 3em;
+                    }
+                }
+            }
+            .enlightment {
+                color: var(--text-color);
+                font-weight: bold;
+                span {
+                    color: var(--important-color);
+                }
+            }
+        }
+        .about-school-right {
+            width: 100%;
+            padding: 2em;
+            display: flex;
+            gap: .3em;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                color: var(--important-color);
+                margin-bottom: 1.5em;
+            }
+            p {
+                letter-spacing: 1px;
+                color: var(--text-light);
+                line-height: 125%;
+                font-weight: 500;
+                font-size: .9em;
+            }
+        }
+    }
+    .staffs {
+        display: block;
+        padding: 2em;
+        .staffs-left {
+            padding: 3em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            h3 {
+                color: var(--important-color);
+                font-size: 1.3em;
+            }
+            p {
+                color: var(--text-light);
+                font-weight: 500;
+                font-size: .9em;
+            }
+        }
+    }
+    .staffs-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 3em;
+        p {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: .9em;
+        }
+        h3 {
+            color: var(--important-color);
+            font-size: 1.3em;
+        }
+    }
+    .StaffAndSchool {
+        padding: 2em;
+        .card-container {
+            display: flex;
+            height: 410px;
+            gap: 1em;
+            .slidinding-card {
+                width: 250px;
+                height: 400px;
+                box-shadow: 0 5px 10px var(--shadow-color);
+                border-radius: 10px;
+                .imge-card {
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        border-top-right-radius: 10px;
+                        border-top-left-radius: 10px;
+                    }
+                }
+                .content {
+                    width: 100%;
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    h4 {
+                        margin-bottom: 1em;
+                        color: var(--important-color);
+                        font-weight: bold;
+                    }
+                    span {
+                        color: var(--text-color);
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+    }
+    .TopRanked {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        margin-top: 1em;
+        h2 {
+            color: var(--important-color);
+        }
+        .top-image {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 2em;
+            .frame {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                box-shadow: 0 3px 6px var(--shadow-color);
+                .img-container {
+                    width: 150px;
+                    height: 150px;
+                    margin-right: .5em;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .text-content {
+                    padding: .5em;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    h4 {
+                        color: var(--text-color);
+                    }
+                    p {
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+    }
+    .Achievements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        gap: .3em;
+        .students-img-container {
+            .student-img {
+                height: 300px;
+                width: 700px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .circle-button {
+            .circle {
+                width: 6px;
+                height: 6px;
+                display: inline-block;
+                border-radius: 50%;
+                background: #000;
+                opacity: .2;
+                margin-right: .5em;
+                margin-left: .5em;
+                cursor: pointer;
+            }
+            .circle.active {
+                background: #000;
+                opacity: 1;
+            }
+        }
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #f1f1f1;
+        width: 100%;
+        margin-top: 4em;
+        .footer-collector {
+            margin-top: 2em;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .more-about {
+                display: flex;
+                flex-direction: column;
+                color: #333333;
+                gap: 1em;
+                .links-about {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    a {
+                        color: #333333;
+                    }
+                    a:hover {
+                        color: var(--important-color);
+                    }
+                }
+            }
+            .contacts {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                color: #333333;
+                p {
+                    svg {
+                        margin-right: .5em;
+                    }
+                }
+                a {
+                    svg {
+                        color: blue;
+                        margin-right: .5em;
+                    }
+                    color: #333333;
+                }
+                a:hover {
+                    color: var(--important-color);
+                }
+            }
+            .location {
+                display: flex;
+                flex-direction: column;
+                color: #333333;
+                gap: 1em;
+                a {
+                    color: #333333;
+                    svg {
+                        color: #000;
+                    }
+                }
+                a:hover {
+                    color: var(--important-color);
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,31 @@
 .StaffAndSchool {
-    padding: 2em;
+    display: flex;
+    gap: .5em;
+    padding: 0 2em;
+    flex-direction: column;
+    .circle-button {
+        text-align: center;
+        .circle {
+            width: 6px;
+            height: 6px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #000;
+            opacity: .2;
+            margin-right: .5em;
+            margin-left: .5em;
+            cursor: pointer;
+        }
+        .circle.active {
+            background: #000;
+            opacity: 1;
+        }
+    }
     .card-container {
         display: flex;
         height: 410px;
-        .StaffSchoolCard {
+        gap: 1em;
+        .slidinding-card {
             width: 400px;
             height: 400px;
             box-shadow: 0 5px 10px var(--shadow-color);
@@ -27,7 +49,7 @@
                     color: var(--important-color);
                     font-weight: bold;
                 }
-                span {
+                p {
                     color: var(--text-color);
                     font-size: .8em;
                 }

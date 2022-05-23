@@ -1,39 +1,52 @@
 import {React,useEffect,useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import SideBar from './SideBar';
+import { faHome,faCalendar,faInfo,faBell,faContactBook,faLock,faRegistered,faTimeline} from '@fortawesome/free-solid-svg-icons';
 export default function Navbar(props) {
+  
+  const [show,setShow]=useState(false)
   const location=useLocation()
   const links=[
     {
       name:"Home",
-      path:"/"
+      path:"/",
+      icon:faHome
     },
     {
       name:"About Us",
-      path:"/AboutUs"
+      path:"/AboutUs",
+      icon:faInfo
     },
     {
       name:"Contacts",
-      path:"/Contacts"
+      path:"/Contacts",
+      icon:faContactBook
     },
     {
       name:"Calender",
-      path:"/Calender"
+      path:"/Calender",
+      icon:faCalendar
     },
     {
       name:"News Announcement",
-      path:"/NewsAnnouncement"
+      path:"/NewsAnnouncement",
+      icon:faBell
     },
     {
       name:"Schedule",
-      path:"/Schedule"
+      path:"/Schedule",
+      icon:faTimeline
+
     },
     {
       name:"Login",
-      path:"/Login"
+      path:"/Login",
+      icon:faLock
     },
     {
       name:"Register",
-      path:"/Register"
+      path:"/Register",
+      icon:faRegistered
     }
   ]
   const [setting,setSetting]=useState(
@@ -92,25 +105,43 @@ export default function Navbar(props) {
     }
 },[setting])
   return (
-    <div className='navbar'>
-       <div className='logo'>
-          <Link to='/' >
-            <h2 className={_theme==="dark"&&"active"}>School<span>Of</span>Tomorrow</h2>
-          </Link>
-       </div>
-       <div className='nav-links'>
-           {links.map((link,index)=>(
-             <Link to={link.path} className={location.pathname===link.path?"link active":"link"}>{link.name}</Link>
-           ))}          
-       </div>
-       <div className='light-dark'>
-              <div className={_theme==="dark"?"dark active":"dark"} onClick={()=>changeTheme(1)}>
-                   
+      <>
+        <div className='navbar'>
+          <div className='logo'>
+              <Link to='/' >
+                <h2 className={_theme==="dark"&&"active"}>School<span>Of</span>Tomorrow</h2>
+              </Link>
+          </div>
+          <div className='nav-links'>
+              {links.map((link,index)=>(
+                
+                <Link to={link.path} className={location.pathname===link.path?"link active":"link"}>{link.name}</Link>
+              ))}          
+          </div>
+          <div className='theme-sidebarBtn'>
+              <div className={show===true?"display-bar active":"display-bar"} onClick={()=>setShow(!show)}>
+                  <div className='div'>
+
+                  </div>
+                  <div className='div'>
+
+                  </div>
+                  <div className='div'>
+
+                  </div>
               </div>
-              <div className={_theme==="light"?"light active":"light"}  onClick={()=>changeTheme(0)}>
-                  
+              <div className='light-dark'>
+                      <div className={_theme==="dark"?"dark active":"dark"} onClick={()=>changeTheme(1)}>
+                          
+                      </div>
+                      <div className={_theme==="light"?"light active":"light"}  onClick={()=>changeTheme(0)}>
+                          
+                      </div>
               </div>
-       </div>
-    </div>
+          </div>
+          
+        </div>
+        {show&&<SideBar links={links} show={show}/>}
+    </>
   )
 }
