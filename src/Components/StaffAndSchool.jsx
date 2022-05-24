@@ -22,7 +22,7 @@ export default function StaffAndSchool() {
     <div className='StaffAndSchool'>
        
        <div className='card-container'>
-           <Swiper 
+           {window.innerWidth>768&&<Swiper 
              spaceBetween={10}
              slidesPerView={3}
              grabCursor={true} 
@@ -35,14 +35,42 @@ export default function StaffAndSchool() {
                     <StaffSchoolCard img={item.img} title={item.title} desc={item.desc}/>
                 </SwiperSlide>
                ))}
-           </Swiper>
-           
+           </Swiper>}
+           {window.innerWidth<=768&&<Swiper 
+             spaceBetween={10}
+             slidesPerView={2}
+             grabCursor={true} 
+             onSlideNextTransitionStart={slideToNext}
+             onSlidePrevTransitionStart={slideToPrev}
+             className="card-container"
+           >
+              {ImageContainer.map((item,index)=>(
+                <SwiperSlide className='slidinding-card'>
+                    <StaffSchoolCard img={item.img} title={item.title} desc={item.desc}/>
+                </SwiperSlide>
+               ))}
+           </Swiper>}
+           {window.innerWidth<=480&&<Swiper 
+             spaceBetween={10}
+             slidesPerView={1}
+             grabCursor={true} 
+             onSlideNextTransitionStart={slideToNext}
+             onSlidePrevTransitionStart={slideToPrev}
+             className="card-container"
+           >
+              {ImageContainer.map((item,index)=>(
+                <SwiperSlide className='slidinding-card'>
+                    <StaffSchoolCard img={item.img} title={item.title} desc={item.desc}/>
+                </SwiperSlide>
+               ))}
+           </Swiper>}
+                     
        </div>
        <div className='circle-button'>
             {ImageContainer.map((img,index)=>(
                 <span className={_index===index+1?'circle active':'circle'} role='button' tabIndex={index}></span>
             ))}
-           </div>
+      </div>
     </div>
   )
 }

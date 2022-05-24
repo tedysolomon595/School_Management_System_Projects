@@ -1,7 +1,4 @@
 import React from 'react'
-import { SwiperSlide } from 'swiper/react'
-import { Swiper } from 'swiper/react';
-import 'swiper/scss';
 export default function Achievements() {
     const achievements=[
         "../img/Students/img_8.jpg",
@@ -16,18 +13,11 @@ export default function Achievements() {
   return (
     <div className='Achievements'>
         <div className='students-img-container'>
-           <Swiper
-               slideToClickedSlide={count}
-               grabCursor={true}
-           >
-           {achievements.map((img,index)=>(
-                count===index&&<div>
-                    <SwiperSlide  className='student-img'>
-                      <img src={img} alt='' />
-                    </SwiperSlide>
+            {achievements.map((img,index)=>(
+                count===index&&<div className='student-img'>
+                    <img src={img} alt='' />
                 </div>
             ))}
-           </Swiper>
         </div>
         
         <div className='circle-button'>
