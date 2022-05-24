@@ -5,6 +5,9 @@ import { faHome,faCalendar,faInfo,faBell,faContactBook,faLock,faRegistered,faTim
 export default function Navbar(props) {
   
   const [show,setShow]=useState(false)
+  function closeSideBar(){
+    setShow(false)
+  }
   const location=useLocation()
   const links=[
     {
@@ -141,7 +144,7 @@ export default function Navbar(props) {
           </div>
           
         </div>
-        {show&&<SideBar links={links} show={show}/>}
+        {show&&<SideBar links={links} show={show} close={closeSideBar}/>}
     </>
   )
 }

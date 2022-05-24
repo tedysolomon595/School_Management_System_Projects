@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-export default function SideBar({links}) {
+export default function SideBar({links,close}) {
     const location=useLocation();
   return (
-    <div className='SideBar'>
+    <div className='SideBar' onClick={close}>
          <h2>School<span>of</span>Tomorrow</h2>
          {links.map((link,index)=>(
                  
