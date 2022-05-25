@@ -371,44 +371,6 @@ body {
             }
         }
     }
-    .Achievements {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2em;
-        gap: .3em;
-        .students-img-container {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            padding: 1em;
-            .student-img {
-                scroll-behavior: smooth;
-                animation: transform animationDelay(.3s) slideToLeft forwards;
-                img {
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-        }
-        .circle-button {
-            .circle {
-                width: 6px;
-                height: 6px;
-                display: inline-block;
-                border-radius: 50%;
-                background: #000;
-                opacity: .2;
-                margin-right: .5em;
-                margin-left: .5em;
-                cursor: pointer;
-            }
-            .circle.active {
-                background: #000;
-                opacity: 1;
-            }
-        }
-    }
     .footer {
         display: flex;
         flex-direction: column;
@@ -477,44 +439,6 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .Achievements {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2em;
-        gap: .3em;
-        .students-img-container {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            padding: 1em;
-            .student-img {
-                scroll-behavior: smooth;
-                animation: transform animationDelay(.3s) slideToLeft forwards;
-                img {
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-        }
-        .circle-button {
-            .circle {
-                width: 6px;
-                height: 6px;
-                display: inline-block;
-                border-radius: 50%;
-                background: #000;
-                opacity: .2;
-                margin-right: .5em;
-                margin-left: .5em;
-                cursor: pointer;
-            }
-            .circle.active {
-                background: #000;
-                opacity: 1;
-            }
-        }
-    }
     .login-form {
         display: flex;
         flex-direction: column;

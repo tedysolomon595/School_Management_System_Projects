@@ -1,42 +1,46 @@
 .Achievements {
     display: flex;
     flex-direction: column;
+    padding: 2em;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
-    gap: .3em;
-    .title {
-        color: var(--important-color);
-    }
-    .students-img-container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        .student-img {
-            width: 100%;
-            height: 100%;
-            scroll-behavior: smooth;
-            animation: transform animationDelay(.3s) slideToLeft forwards;
-            img {
-                height: 100%;
-                width: 100%;
+    .students-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2em;
+        width: 100%;
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1em;
+            padding: 1em;
+            p {
+                border-left: 3px solid var(--important-color);
+                padding: .5em;
+                color: var(--text-light);
+                animation: animationDelay(1s) slideToLeft forwards;
+                &:nth-child(1) {
+                    animation-duration: .1s;
+                }
+                &:nth-child(2) {
+                    animation-duration: .2s;
+                }
+                &:nth-child(3) {
+                    animation-duration: .3s;
+                }
+                &:nth-child(4) {
+                    animation-duration: .4s;
+                }
+                &:nth-child(5) {
+                    animation-duration: .5s;
+                }
             }
         }
     }
-    .circle-button {
-        .circle {
-            width: 6px;
-            height: 6px;
-            display: inline-block;
-            border-radius: 50%;
-            background: #000;
-            opacity: .2;
-            margin-right: .5em;
-            margin-left: .5em;
-            cursor: pointer;
-        }
-        .circle.active {
-            background: #000;
-            opacity: 1;
-        }
+    .title {
+        color: var(--important-color);
+        font-weight: bold;
     }
 }
