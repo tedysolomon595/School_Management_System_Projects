@@ -48,7 +48,9 @@ export default function Footer() {
                 </a>
             </div>
          </div>
-
+         <div className='copy-box'>
+            <p className='copyright'>&copy; 2022 Tedy Solomon. All Rights Reserved.</p>
+         </div>
     </div>
   )
 }

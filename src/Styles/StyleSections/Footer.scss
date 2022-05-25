@@ -2,11 +2,21 @@
     display: flex;
     flex-direction: column;
     background-color: #f1f1f1;
+    gap: 3em;
     width: 100%;
     margin-top: 4em;
     padding: 1em 1em 1em 5em;
+    .copy-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            color: #333333;
+        }
+    }
     .footer-collector {
         margin-top: 2em;
+        padding-left: 6em;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         .more-about {
