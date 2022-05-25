@@ -44,7 +44,8 @@ export default function AchievementsText() {
             
         },
         
-    ]
+    ];
+    
   return (
     <div className='AchievementsText'>
           {window.innerWidth>768&&<Swiper

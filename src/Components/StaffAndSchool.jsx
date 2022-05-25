@@ -29,6 +29,7 @@ export default function StaffAndSchool() {
              grabCursor={true} 
              onSlideNextTransitionStart={slideToNext}
              onSlidePrevTransitionStart={slideToPrev}
+             
              className="card-container"
            >
               {ImageContainer.map((item,index)=>(
