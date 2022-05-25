@@ -1,4 +1,5 @@
 import React from 'react'
+import AchievementsText from './AchievementsText'
 export default function Achievements() {
     const achievements=[
         "../img/Students/img_8.jpg",
@@ -12,6 +13,8 @@ export default function Achievements() {
     
   return (
     <div className='Achievements'>
+        <h2 className='title'>Achievements </h2>
+        <AchievementsText/>
         <div className='students-img-container'>
             {achievements.map((img,index)=>(
                 count===index&&<div className='student-img'>

@@ -4,6 +4,7 @@ import StaffSchoolCard from './StaffSchoolCard'
 import {Swiper,SwiperSlide} from 'swiper/react';
 import 'swiper/scss';
 export default function StaffAndSchool() {
+  
    const [_index,setIndex]=React.useState(3)
    function slideToNext(){
        if(_index>=7)

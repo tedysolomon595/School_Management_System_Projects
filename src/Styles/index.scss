@@ -5,13 +5,14 @@
     --important-color: rgb(255, 0, 86);
     --shadow-color: #abb8c3;
     --link-color: #ffffff;
-    --animation-speed: 2;
+    --animation-speed: 1;
 }
 
 @function animationDelay($duration:number) {
     @return calc(var(--animation-speed)*$duration)
 }
 
+@import './StyleSections/AchievementsText.scss';
 @import './StyleSections/Achievements.scss';
 @import './StyleSections/TopRanked.scss';
 @import './StyleSections/StaffAndSchool.scss';
